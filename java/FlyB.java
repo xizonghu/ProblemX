@@ -1,3 +1,4 @@
+package com.antengine.armchair.test;
 
 public class FlyB {
 	public static String f(String str) {
@@ -9,7 +10,8 @@ public class FlyB {
 	}
 
 	public static String g(String str) {
-		str = str.toLowerCase().replace(" ", "");
+		str = str.toLowerCase().replaceAll("[^a-z]+", "");
+		System.out.printf("str = %s\n", str);
 		String res = "{\n";
 		int [] arr = new int [26];
 		for(int i = 0; i < arr.length; i++) arr[i] = 0;
@@ -25,7 +27,7 @@ public class FlyB {
 	public static void main(String[] args) {
 		String res = f("acp");
 		System.out.printf("res = %s\n", res);
-		res = g("Hello Apple");
+		res = g("Hello! Apple!");
 		System.out.printf("res = %s\n", res);
 	}
 }
