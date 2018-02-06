@@ -1,5 +1,7 @@
 package com.antengine.armchair.test;
 
+import java.util.Stack;
+
 public class TreeTest {
 
 	public static class TreeNode {
